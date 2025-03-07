@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "Не вовремя",
@@ -13,7 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={``}>{children}</body>
+      <body className="flex min-h-screen flex-col">
+        <Header />
+        <main className="flex-grow flex flex-col">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
