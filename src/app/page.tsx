@@ -1,33 +1,96 @@
-import Banner from "@/components/banner";
-import Member from "@/components/member";
-import Section from "@/components/section";
-import Image from "next/image";
-import sanich from "../../public/sanichplotniy.png";
+import Banner from '@/components/banner';
+import Member from '@/components/member';
+import Section from '@/components/section';
+import Image from 'next/image';
+import boys from '../../public/boys.jpg';
+import gear from '../../public/gear.jpg';
+import costumes from '../../public/costumes.jpg';
+import ale from '../../public/ale.jpg';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import { cn } from "@/lib/utils";
-import Link from "next/link";
-import { Vk } from "@/components/svg";
+} from '@/components/ui/accordion';
+import { cn } from '@/lib/utils';
+import Link from 'next/link';
+import { Vk, Telegram, Avito } from '@/components/svg';
 
 export default function Home() {
   return (
     <>
       <Banner />
       <Section id="about" title="О нас">
-        <div className="flex justify-center items-center flex-col md:flex-row gap-5 md:items-stretch">
-          <p className={cn("text-base max-w-xl", "sm:text-lg", "md:text-xl")}>
-            Здесь напишем что-нибудь хорошее про нас, какие молодцы и подающие
-            надежды,а еще может и картиночку квадратную забубеню какую-нибудь
+        <div className="flex flex-col gap-5 mb-5 sm:mb-0 sm:gap-0 sm:flex-row sm:items-stretch">
+          <p
+            className={cn(
+              'text-sm flex justify-center items-center',
+              'sm:text-base sm:w-1/2',
+              'lg:text-3xl'
+            )}
+          >
+            <span className="w-full sm:w-3/4">
+              Молодые, задорные ребята, любящие исполнять везде, куда позовут -
+              свадьбы, корпоративы, вечеринки и просто скрасить вечер в приятном
+              заведении
+            </span>
           </p>
 
-          <Image src={sanich} alt="группа" className={cn("w-40")} />
+          <Image
+            src={boys}
+            alt="Группа"
+            className={cn(
+              'max-w-[480px] w-full mx-auto',
+              'sm:w-1/2 max-w-auto'
+            )}
+          />
+        </div>
+        <div className="flex flex-col-reverse gap-5 mb-5 sm:mb-0 sm:gap-0 sm:flex-row sm:items-stretch">
+          <Image
+            src={gear}
+            alt="Оборудование"
+            className={cn(
+              'max-w-[480px] w-full mx-auto',
+              'sm:w-1/2 max-w-auto'
+            )}
+          />
+          <p
+            className={cn(
+              'text-sm flex justify-center items-center',
+              'sm:text-base sm:w-1/2',
+              'lg:text-3xl'
+            )}
+          >
+            <span className="w-full sm:w-3/4">
+              Имеем своё оборудование, что обеспечивает качественное звучание,
+              которое задает настроение мероприятию
+            </span>
+          </p>
+        </div>
+        <div className="flex flex-col gap-5 mb-5 sm:mb-0 sm:gap-0 sm:flex-row sm:items-stretch">
+          <p
+            className={cn(
+              'text-sm flex justify-center items-center',
+              'sm:text-base sm:w-1/2',
+              'lg:text-3xl'
+            )}
+          >
+            <span className="w-full sm:w-3/4">
+              У нас есть свой стиль, однако на праздники мы можем подготовить
+              особые костюмы для большей атмосферности
+            </span>
+          </p>
+          <Image
+            src={costumes}
+            alt="Стиль"
+            className={cn(
+              'max-w-[480px] w-full mx-auto',
+              'sm:w-1/2 max-w-auto'
+            )}
+          />
         </div>
       </Section>
-      <Section id="promo" title="Промо">
+      {/* {<Section id="promo" title="Промо">
         <div className="flex justify-center gap-5 flex-wrap">
           <iframe
             width="460"
@@ -50,35 +113,35 @@ export default function Home() {
             allowFullScreen
           ></iframe>
         </div>
-      </Section>
+      </Section>} */}
       <Section title="Состав группы">
         <div className="flex justify-between flex-wrap gap-y-5">
           <Member
             name="Ярослав"
             instrument="Гитара, вокал"
-            className={cn("basis-full", "md:basis-1/2", "lg:basis-auto")}
+            className={cn('basis-full', 'md:basis-1/2', 'lg:basis-auto')}
           />
           <Member
             name="Ильдар"
             instrument="Гитара"
-            className={cn("basis-full", "md:basis-1/2", "lg:basis-auto")}
+            className={cn('basis-full', 'md:basis-1/2', 'lg:basis-auto')}
           />
           <Member
             name="Александр"
             instrument="Барабаны"
-            className={cn("basis-full", "md:basis-1/2", "lg:basis-auto")}
+            className={cn('basis-full', 'md:basis-1/2', 'lg:basis-auto')}
           />
           <Member
             name="Марк"
             instrument="Бас-гитара"
-            className={cn("basis-full", "md:basis-1/2", "lg:basis-auto")}
+            className={cn('basis-full', 'md:basis-1/2', 'lg:basis-auto')}
           />
         </div>
       </Section>
-      <Section id="repertoire" title="Репертуар">
+      {/* {<Section id="repertoire" title="Репертуар">
         <div className="flex justify-center items-center flex-col md:flex-row gap-5 md:items-stretch">
           <div className="max-w-xl">
-            <p className={cn("text-base", "sm:text-lg", "md:text-xl")}>
+            <p className={cn('text-base', 'sm:text-lg', 'md:text-xl')}>
               Здесь что-нибудь напишем про репертуар, можно как у ДРУГИХ ГРУПП
               но своими словами
             </p>
@@ -87,10 +150,10 @@ export default function Home() {
               (сделаю позже)
             </p>
           </div>
-          <Image src={sanich} alt="группа" className={cn("w-40")} />
+          <Image src={sanich} alt="группа" className={cn('w-40')} />
         </div>
-      </Section>
-      <Section title="Часто задаваемые вопросы">
+      </Section>} */}
+      <Section id="faq" title="Часто задаваемые вопросы">
         <Accordion
           type="single"
           collapsible
@@ -98,46 +161,65 @@ export default function Home() {
         >
           <AccordionItem value="item-1">
             <AccordionTrigger className="text-xl">
-              Что нужно сделать?
+              Сколько стоит выступление?
             </AccordionTrigger>
             <AccordionContent className="text-base md:text-xl">
-              Составить список часто задаваемых вопросов от пишущих нам людей а
-              потом добавить в этот аккордеон
+              Цена выступления зависит от множества факторов, таких как формат
+              мероприятия, где находится площадка, есть ли на ней оборудование и
+              т.д.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
             <AccordionTrigger className="text-xl">
-              Is it styled?
+              Вы выезжаете в другие города или места за пределом города?
             </AccordionTrigger>
             <AccordionContent className="text-base md:text-xl">
-              Yes. It comes with default styles that matches the other
-              components&apos; aesthetic.
+              Да (?), и, естественно, это влияет на цену
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
             <AccordionTrigger className="text-xl">
-              Is it animated?
+              Сколько времени занимает выступление?
             </AccordionTrigger>
             <AccordionContent className="text-base md:text-xl">
-              Yes. It&apos;s animated by default, but you can disable it if you
-              prefer.
+              Стандартно мы предлагаем 4 блока по 6 песен, что занимает примерно
+              2-3 часа вместе с перерывами.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-4">
+            <AccordionTrigger className="text-xl">
+              Имеется ли у вас оборудование?
+            </AccordionTrigger>
+            <AccordionContent className="text-base md:text-xl">
+              У нас есть основное оборудование, нам нужны лишь колонки. Вопросом
+              их предоставления может заняться организатор или мы можем
+              арендовать их сами. Возможно, колонки уже присутствуют на
+              площадке.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
       </Section>
       <Section id="contacts" title="Где с нами можно связаться">
-        <div className={cn("flex gap-5 justify-center flex-wrap")}>
-          <Link className="bg-white p-1" href="/">
-            <Vk className="w-10 h-10 md:w-20 md:h-20" />
+        <Image
+          src={ale}
+          alt="Контакты"
+          className="max-w-[320px] w-full mx-auto mb-5"
+        />
+        <div className={cn('flex gap-5 justify-center flex-wrap')}>
+          <Link
+            className="bg-white p-2 rounded-full"
+            href="https://vk.com/notintime74?from=groups"
+          >
+            <Vk className="w-10 h-10" />
           </Link>
-          <Link className="bg-white p-1" href="/">
-            <Vk className="w-10 h-10 md:w-20 md:h-20" />
+          <Link
+            className="bg-white p-2 rounded-full"
+            href="https://t.me/chupapimuniani"
+          >
+            <Telegram className="w-10 h-10" />
           </Link>
-          <Link className="bg-white p-1" href="/">
-            <Vk className="w-10 h-10 md:w-20 md:h-20" />
-          </Link>
-          <Link className="bg-white p-1" href="/">
-            <Vk className="w-10 h-10 md:w-20 md:h-20" />
+          <Link className="bg-white p-2 rounded-full" href="/">
+            <Avito className="w-10 h-10" />
           </Link>
         </div>
       </Section>
