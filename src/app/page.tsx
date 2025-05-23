@@ -175,10 +175,10 @@ export default function Home() {
             </AccordionTrigger>
             <AccordionContent className="text-base md:text-xl">
               <p>
-                Цена выступления - договорная. Стоимость складывается из формата
-                и масштаба мероприятия, местонахождение площадки, наличия
-                оборудования и тд.
+                Стандартный концерт в г. Челябинск - 30000₽ за 4 блока по 6
+                песен каждый.
               </p>
+              <p>В остальных случаях - цена договорная.</p>
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
@@ -201,18 +201,6 @@ export default function Home() {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-4">
-            <AccordionTrigger className="text-xl">
-              <p>Сколько стоит ваше выступление?</p>
-            </AccordionTrigger>
-            <AccordionContent className="text-base md:text-xl">
-              <p>
-                Стандартный концерт в г. Челябинск - 30000₽ за 4 блока по 6
-                песен каждый.
-              </p>
-              <p>В остальных случаях - цена договорная.</p>
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-5">
             <AccordionTrigger className="text-xl">
               <p>Имеется ли у вас оборудование?</p>
             </AccordionTrigger>
