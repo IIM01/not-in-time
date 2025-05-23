@@ -171,40 +171,58 @@ export default function Home() {
         >
           <AccordionItem value="item-1">
             <AccordionTrigger className="text-xl">
-              Сколько стоит выступление?
+              <p>Сколько стоит выступление?</p>
             </AccordionTrigger>
             <AccordionContent className="text-base md:text-xl">
-              Цена выступления - договорная. Стоимость складывается из формата и
-              масштаба мероприятия, местонахождение площадки, наличия
-              оборудования и тд.
+              <p>
+                Цена выступления - договорная. Стоимость складывается из формата
+                и масштаба мероприятия, местонахождение площадки, наличия
+                оборудования и тд.
+              </p>
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
             <AccordionTrigger className="text-xl">
-              Вы выезжаете в другие города или места за пределом города?
+              <p>Вы выезжаете в другие города или места за пределом города?</p>
             </AccordionTrigger>
             <AccordionContent className="text-base md:text-xl">
-              Да
+              <p>Да</p>
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
             <AccordionTrigger className="text-xl">
-              Сколько времени занимает выступление?
+              <p>Сколько времени занимает выступление?</p>
             </AccordionTrigger>
             <AccordionContent className="text-base md:text-xl">
-              Стандартно мы предлагаем 4 блока по 6 песен, что занимает примерно
-              2-3 часа вместе с перерывами.
+              <p>
+                Стандартно мы предлагаем 4 блока по 6 песен, что занимает
+                примерно 2-3 часа вместе с перерывами.
+              </p>
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-4">
             <AccordionTrigger className="text-xl">
-              Имеется ли у вас оборудование?
+              <p>Сколько стоит ваше выступление?</p>
             </AccordionTrigger>
             <AccordionContent className="text-base md:text-xl">
-              У нас есть основное оборудование, нам нужны лишь колонки. Вопросом
-              их предоставления может заняться организатор или мы можем
-              арендовать их сами. Возможно, колонки уже присутствуют на
-              площадке.
+              <p>
+                Стандартный концерт в г. Челябинск - 30000₽ за 4 блока по 6
+                песен каждый.
+              </p>
+              <p>В остальных случаях - цена договорная.</p>
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-5">
+            <AccordionTrigger className="text-xl">
+              <p>Имеется ли у вас оборудование?</p>
+            </AccordionTrigger>
+            <AccordionContent className="text-base md:text-xl">
+              <p>
+                У нас есть основное оборудование, нам нужны лишь колонки.
+                Вопросом их предоставления может заняться организатор или мы
+                можем арендовать их сами. Возможно, колонки уже присутствуют на
+                площадке.
+              </p>
             </AccordionContent>
           </AccordionItem>
         </Accordion>
