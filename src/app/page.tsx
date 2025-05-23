@@ -143,7 +143,7 @@ export default function Home() {
           <Member
             name="Марк"
             imageUrl={mark}
-            instrument="Бас-гитара"
+            instrument="Бас-гитара, вокал"
             className={cn('basis-full', 'md:basis-1/2', 'lg:basis-auto')}
           />
         </div>
