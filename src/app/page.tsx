@@ -6,6 +6,10 @@ import boys from '../../public/boys.jpg';
 import gear from '../../public/gear.jpg';
 import costumes from '../../public/costumes.jpg';
 import ale from '../../public/ale.jpg';
+import alex from '../../public/alex.jpg';
+import tilda from '../../public/tilda.jpg';
+import yarost from '../../public/yarost.jpg';
+import mark from '../../public/mark.jpg';
 import {
   Accordion,
   AccordionContent,
@@ -14,7 +18,7 @@ import {
 } from '@/components/ui/accordion';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import { Vk, Telegram, Avito } from '@/components/svg';
+import { Vk, Telegram } from '@/components/svg';
 
 export default function Home() {
   return (
@@ -30,9 +34,9 @@ export default function Home() {
             )}
           >
             <span className="w-full sm:w-3/4">
-              Молодые, задорные ребята, любящие исполнять везде, куда позовут -
-              свадьбы, корпоративы, вечеринки и просто скрасить вечер в приятном
-              заведении
+              Молодые и талантливые исполнители уже два года восполняют Ваши
+              запасы позитивных эмоций на свадьбах, корпоративах, вечеринках и
+              просто посиделках вечером в приятном заведении.
             </span>
           </p>
 
@@ -63,7 +67,8 @@ export default function Home() {
           >
             <span className="w-full sm:w-3/4">
               Имеем своё оборудование, что обеспечивает качественное звучание,
-              которое задает настроение мероприятию
+              которое задает настроение мероприятию. Если коротко - две
+              электрогитары, бас гитара, барабаны, микрофоны.
             </span>
           </p>
         </div>
@@ -77,7 +82,8 @@ export default function Home() {
           >
             <span className="w-full sm:w-3/4">
               У нас есть свой стиль, однако на праздники мы можем подготовить
-              особые костюмы для большей атмосферности
+              особые костюмы по запросу, зная, что слушатель любит не только
+              ушами :) Подберём реквизит и костюмы под Вашу тематику.
             </span>
           </p>
           <Image
@@ -119,20 +125,24 @@ export default function Home() {
           <Member
             name="Ярослав"
             instrument="Гитара, вокал"
+            imageUrl={yarost}
             className={cn('basis-full', 'md:basis-1/2', 'lg:basis-auto')}
           />
           <Member
             name="Ильдар"
             instrument="Гитара"
+            imageUrl={tilda}
             className={cn('basis-full', 'md:basis-1/2', 'lg:basis-auto')}
           />
           <Member
             name="Александр"
+            imageUrl={alex}
             instrument="Барабаны"
             className={cn('basis-full', 'md:basis-1/2', 'lg:basis-auto')}
           />
           <Member
             name="Марк"
+            imageUrl={mark}
             instrument="Бас-гитара"
             className={cn('basis-full', 'md:basis-1/2', 'lg:basis-auto')}
           />
@@ -164,9 +174,9 @@ export default function Home() {
               Сколько стоит выступление?
             </AccordionTrigger>
             <AccordionContent className="text-base md:text-xl">
-              Цена выступления зависит от множества факторов, таких как формат
-              мероприятия, где находится площадка, есть ли на ней оборудование и
-              т.д.
+              Цена выступления - договорная. Стоимость складывается из формата и
+              масштаба мероприятия, местонахождение площадки, наличия
+              оборудования и тд.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
@@ -174,7 +184,7 @@ export default function Home() {
               Вы выезжаете в другие города или места за пределом города?
             </AccordionTrigger>
             <AccordionContent className="text-base md:text-xl">
-              Да (?), и, естественно, это влияет на цену
+              Да
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
@@ -217,9 +227,6 @@ export default function Home() {
             href="https://t.me/chupapimuniani"
           >
             <Telegram className="w-10 h-10" />
-          </Link>
-          <Link className="bg-white p-2 rounded-full" href="/">
-            <Avito className="w-10 h-10" />
           </Link>
         </div>
       </Section>

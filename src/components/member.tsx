@@ -1,13 +1,15 @@
-import { cn } from "@/lib/utils";
-import Image from "next/image";
+import { cn } from '@/lib/utils';
+import Image, { StaticImageData } from 'next/image';
 
 export default function Member({
   name,
   instrument,
+  imageUrl,
   className,
 }: {
   name: string;
   instrument: string;
+  imageUrl: StaticImageData;
   className?: string;
 }) {
   return (
@@ -17,7 +19,7 @@ export default function Member({
         height={200}
         className="rounded-[50%] mb-5 mx-auto"
         alt={name}
-        src="https://loremflickr.com/250/250"
+        src={imageUrl}
       />
       <p className="text-xl font-semibold text-center mb-3">{name}</p>
       <p className="text-center italic">{instrument}</p>
