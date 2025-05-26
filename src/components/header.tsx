@@ -20,7 +20,7 @@ export default function Header() {
       <Container className="flex justify-end md:block">
         <div
           className={cn(
-            'fixed -top-full left-0 right-0 bg-background h-screen overflow-auto transition-[top] duration-300',
+            'fixed -top-[120%] left-0 right-0 bg-background h-screen overflow-auto transition-[top] duration-300',
             'md:static md:h-auto',
             isMobileNavOpen && 'top-0'
           )}
